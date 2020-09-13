@@ -8,7 +8,7 @@ var path = require('path');
 var bot = new Telegraf(tokens.BOT_TOKEN);
 var app = express();
 
-app.set('port', tokens.PORT || tokens.DEFAULT_PORT);
+//app.set('port', tokens.PORT || tokens.DEFAULT_PORT);
 app.use(express.static(path.join(__dirname + '/html')));
 //app.use(bot.webhookCallback('/bot'+tokens.BOT_TOKEN));
 
@@ -88,8 +88,8 @@ app.get('/setscore/uid/:user_id/iid/:iid/score/:score', (req, res) => {
     res.sendStatus(200);
 });
 
-app.listen(app.get('port'), () => {
-    console.log("Listening on port:" + app.get('port'));
-});
-
+//app.listen(app.get('port'), () => {
+    //console.log("Listening on port:" + app.get('port'));
+//});
+server.listen(3000);
 bot.launch();
