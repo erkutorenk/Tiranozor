@@ -91,5 +91,5 @@ app.get('/setscore/uid/:user_id/iid/:iid/score/:score', (req, res) => {
 //app.listen(app.get('port'), () => {
     //console.log("Listening on port:" + app.get('port'));
 //});
-server.listen(3000);
+app.listen(3000);
 bot.launch();
