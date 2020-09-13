@@ -5,6 +5,6 @@ module.exports = {
     WEBHOOK : 'https://tiranozor.herokuapp.com/', //https://telegram-bot-sdk.readme.io/docs/setwebhook
     GAME_URL : 'https://tiranozor.herokuapp.com/',
     GAME_NAME : 'tiranozor',
-    PORT : 3000,    // Put your specific port here
+    PORT : 8443,    // Put your specific port here
     DEFAULT_PORT : 3000
 }
