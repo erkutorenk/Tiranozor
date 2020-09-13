@@ -10,9 +10,9 @@ var app = express();
 
 app.set('port', tokens.PORT || tokens.DEFAULT_PORT);
 app.use(express.static(path.join(__dirname + '/html')));
-app.use(bot.webhookCallback('/bot'+tokens.BOT_TOKEN));
+//app.use(bot.webhookCallback('/bot'+tokens.BOT_TOKEN));
 
-bot.telegram.setWebhook(tokens.WEBHOOK+"bot"+tokens.BOT_TOKEN);
+//bot.telegram.setWebhook(tokens.WEBHOOK+"bot"+tokens.BOT_TOKEN);
  
 bot.gameQuery((ctx) => {
     var uid = ctx.from.id;
@@ -91,3 +91,5 @@ app.get('/setscore/uid/:user_id/iid/:iid/score/:score', (req, res) => {
 app.listen(app.get('port'), () => {
     console.log("Listening on port:" + app.get('port'));
 });
+
+bot.launch();
